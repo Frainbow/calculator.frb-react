@@ -11,8 +11,8 @@ class FuncBtn extends React.Component {
     let className = "btn btn-info btn-lg col-xs-" + this.props.col
 
     return (
-      <button className={className}>
-        {this.props.func}
+      <button className={className} onClick={this.props.handleClick}>
+        {this.props.funcName}
       </button>
     )
   }

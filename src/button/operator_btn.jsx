@@ -4,6 +4,11 @@ class OperatorBtn extends React.Component {
 
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.props.handleOperator(this.props.operator)
   }
 
   render() {
@@ -11,7 +16,7 @@ class OperatorBtn extends React.Component {
     let className = "btn btn-primary btn-lg col-xs-" + this.props.col
 
     return (
-      <button className={className}>
+      <button className={className} onClick={this.handleClick}>
         {this.props.operator}
       </button>
     )

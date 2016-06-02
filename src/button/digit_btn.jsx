@@ -4,6 +4,11 @@ class DigitBtn extends React.Component {
 
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.props.handleDigit(this.props.digit)
   }
 
   render() {
@@ -11,7 +16,7 @@ class DigitBtn extends React.Component {
     let className = "btn btn-default btn-lg col-xs-" + this.props.col
 
     return (
-      <button className={className}>
+      <button className={className} onClick={this.handleClick}>
         {this.props.digit}
       </button>
     )
