@@ -224,7 +224,7 @@ class Calculator extends React.Component {
 
   render() {
 
-    let style = { maxWidth: '50vh' }
+    let style = { maxWidth: '300px' }
 
     return (
       <div className="container" style={style}>
