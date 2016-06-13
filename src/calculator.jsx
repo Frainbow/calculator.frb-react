@@ -192,7 +192,8 @@ class Calculator extends React.Component {
 
     this.setState({
       text: String(value),
-      value: value
+      value: value,
+      operand1: this.state.newStatement ? value : this.state.operand1
     })
   }
 
@@ -201,7 +202,8 @@ class Calculator extends React.Component {
 
     this.setState({
       text: String(value),
-      value: value
+      value: value,
+      operand1: this.state.newStatement ? value : this.state.operand1
     })
   }
 
